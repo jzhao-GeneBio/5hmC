@@ -9,9 +9,9 @@ j = 9
 library(glmnet)
 
 dir = "/5hmC_final/"
-dir2 = "./results/residuals/"
-dir3 = "./results/residuals/"
-dir_o = "results/residuals/"
+dir2 = "/results/residuals/"
+dir3 = "/results/residuals/"
+dir_o = "/results/residuals/"
 
 cl00 = read.table(paste(dir,"Hydro_dataset_655_basic_10-11-2020.Neat1060.txt", sep=""), sep="\t", header=T)
 hmc0 = read.table(paste(dir2, "residual_TMM_", onevar, "_scaled_HFv", j, "_others.txt", sep=""), header=T)
