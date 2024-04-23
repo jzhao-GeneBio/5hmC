@@ -2,7 +2,7 @@ library(parallel)
 library(DiffBind)
 
 dir = "/data/"
-dirres = "/bams/q01_v6/"
+dirres = "/bams/"
 samples = read.csv(file.path(dir, "sampleSheet_noControl_all_le10M_p5f2_fdr01.txt"), sep="\t")
 novo = dba(sampleSheet=samples, minOverlap=200)
 dba.save(novo, file="all_noControl_le5M_1060_200.dba", dir=dirres)
