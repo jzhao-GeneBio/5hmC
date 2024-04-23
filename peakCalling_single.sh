@@ -16,7 +16,7 @@ echo -e "python version: "
 python -V
 
 dirref=/data/human/ensembl_GRCh38/bwa/Homo_sapiens_assembly38.fasta
-ctrlBam=/orange/icbrbi/tgu/Jinying_Zhao/control_merged_NovogeneInputs.bam.sor.bam
+ctrlBam=control_merged_NovogeneInputs.bam.sor.bam
 blist=/data/human/ensembl_GRCh38/bowtie2/hg38-blacklist.v2.bed.gz
 if [[ ${one} == *Yerkes* ]]; then
 	inputBam=${dirres}/${ID}_Yerkes/${ID}_b2_rmMultiQual.bam
