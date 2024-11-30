@@ -13,14 +13,14 @@ Peak calling:
   
     peakCalling_single.sh
   
-    combine_peaks.R
+    derive consensus peaks.R
 
 
 Elastic Net selection:
 
-    en_sel.R
+    elastic net model.R
 
 
 Regression:
 
-    glm.R
+    association analysis (AD diagnosis).R
