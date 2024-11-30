@@ -23,7 +23,7 @@ Elastic Net selection:
 
 Regression:
 
-    association analysis (AD diagnosis).R
+    association analysis.R
 
 Colocalization analysis:
 
