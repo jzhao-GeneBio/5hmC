@@ -17,12 +17,12 @@ Peak calling:
 Elastic Net selection:
 
     elastic net model.R
-    variation explained.R
 
     
 Regression:
 
-    association analysis.
+    association analysis.R
+    variation explained.R
 
 
 Colocalization analysis:
