@@ -10,10 +10,7 @@ a=a[a[,'study']=='MAP',] # train: MAP; test: ROS
 table(a[,'ad_reagan'])
 require(openxlsx)
 ### read 5hmC data 
-file='~/5hmcData/peakSet1_p5f2ovlp200/residual_TMM_rmXY_ad_reagan_scaled_HFv9.txt'
-col_name <- scan(file,what = "",sep = "\t",nlines = 1,skip = 0,quiet = TRUE,strip.white = TRUE)
-length(col_name)
-hmC=read_delim(file,skip=1,col_names = F) 
+hmC=readRDS('5hmC_AD.RDS')
 hmC[1:2,1:3]
 
 sum(hmC[,'projid']%in%a[,'projid']) 
@@ -61,10 +58,7 @@ a=a[a[,'study']=='MAP',] # train: MAP; test: ROS
 #a=a[a[,'study']=='ROS',]
 require(openxlsx)
 ### read 5hmC data 
-file='~/5hmcData/peakSet1_p5f2ovlp200/residual_TMM_rmXY_ad_reagan_scaled_HFv9.txt'
-col_name <- scan(file,what = "",sep = "\t",nlines = 1,skip = 0,quiet = TRUE,strip.white = TRUE)
-length(col_name)
-hmC=read_delim(file,skip=1,col_names = F) 
+hmC=readRDS('5hmC_amylsqrt.RDS')
 hmC[1:2,1:3]
 
 sum(hmC[,'projid']%in%a[,'projid']) 
@@ -112,10 +106,7 @@ a=a[a[,'study']=='MAP',] # train: MAP; test: ROS
 #a=a[a[,'study']=='ROS',]
 require(openxlsx)
 ### read 5hmC data 
-file='~/5hmcData/peakSet1_p5f2ovlp200/residual_TMM_rmXY_ad_reagan_scaled_HFv9.txt'
-col_name <- scan(file,what = "",sep = "\t",nlines = 1,skip = 0,quiet = TRUE,strip.white = TRUE)
-length(col_name)
-hmC=read_delim(file,skip=1,col_names = F) 
+hmC=readRDS('5hmC_tau.RDS') 
 hmC[1:2,1:3]
 
 sum(hmC[,'projid']%in%a[,'projid']) 
