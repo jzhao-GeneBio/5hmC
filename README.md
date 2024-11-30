@@ -1,5 +1,5 @@
 # 5hmC
-The codes shown here were used to perform the alignment of the fastq files to human genome (hg38), peak calling, elastic net selection, and regression for identifying AD related 5hmCs.
+The programs shown here were used to perform the alignment of the fastq files to human genome (hg38), peak calling, and downstream analyses (e.g., association analysis, enrichment analysis) for identifying AD related 5hmCs.
 
 ## analysis process
 Alignment:
