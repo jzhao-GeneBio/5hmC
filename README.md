@@ -24,3 +24,16 @@ Elastic Net selection:
 Regression:
 
     association analysis (AD diagnosis).R
+
+Colocalization analysis:
+
+    Colocalization Analysis.R
+
+R code for the figure of demographics of multi-omics data:
+
+    Figure--Demographics of Multi-omics Data.R
+
+GARFIELD shell script:
+
+    GARFIELD_Code.sh
+
