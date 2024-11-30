@@ -1,6 +1,4 @@
 ############################ AD diagnosis ############################
-library("data.table")
-library("readr") 
 a=read.delim('~/5hmcData/Hydro_dataset_655_basic_10-11-2020.Neat1060.txt')
 #colnames(a)
 a=data.frame(a)
@@ -8,7 +6,6 @@ a=data.frame(a)
 a=a[a[,'study']=='MAP',] # train: MAP; test: ROS
 #a=a[a[,'study']=='ROS',]
 table(a[,'ad_reagan'])
-require(openxlsx)
 ### read 5hmC data 
 hmC=readRDS('5hmC_AD.RDS')
 hmC[1:2,1:3]
@@ -48,15 +45,12 @@ write.table(output,'glm_map_AD.csv',sep=',',row.names = F, col.names=T)
 
 
 ############################ Abeta ############################
-library("data.table")
-library("readr") 
 a=read.delim('~/5hmcData/Hydro_dataset_655_basic_10-11-2020.Neat1060.txt')
 #colnames(a)
 a=data.frame(a)
 #head(a)
 a=a[a[,'study']=='MAP',] # train: MAP; test: ROS
 #a=a[a[,'study']=='ROS',]
-require(openxlsx)
 ### read 5hmC data 
 hmC=readRDS('5hmC_amylsqrt.RDS')
 hmC[1:2,1:3]
@@ -96,15 +90,12 @@ write.table(output,'lm_map_Abeta.csv',sep=',',row.names = F, col.names=T)
 
 
 ############################ Tau ############################
-library("data.table")
-library("readr") 
 a=read.delim('~/5hmcData/Hydro_dataset_655_basic_10-11-2020.Neat1060.txt')
 #colnames(a)
 a=data.frame(a)
 #head(a)
 a=a[a[,'study']=='MAP',] # train: MAP; test: ROS
 #a=a[a[,'study']=='ROS',]
-require(openxlsx)
 ### read 5hmC data 
 hmC=readRDS('5hmC_tau.RDS') 
 hmC[1:2,1:3]
