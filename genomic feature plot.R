@@ -1,8 +1,5 @@
 ########## ChIPpeakAnno for peak annotation
-#https://www.bioconductor.org/packages/devel/bioc/vignettes/ChIPpeakAnno/inst/doc/ChIPpeakAnno.html
-#https://jianhong.github.io/workshop2020/articles/ChIPpeakAnno.html
 library(ChIPpeakAnno)
-#library(TxDb.Hsapiens.UCSC.hg38.knownGene,lib.loc='/blue/zhao/gmiao/EPIC850k/R_package')
 library(TxDb.Hsapiens.UCSC.hg38.knownGene) 
 
 # Convert peaks to GRanges
