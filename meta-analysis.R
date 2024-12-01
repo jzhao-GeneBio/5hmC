@@ -1,4 +1,3 @@
-################## part I: meta-analysis
 output=read.csv("~/5hmC_AD/output/glm_map_AD.csv",header=F)
 colnames(output)=c('hmc',"beta","se","t","p")
 
