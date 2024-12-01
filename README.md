@@ -22,6 +22,10 @@ Association analysis:
     meta-analysis.R
     
 
+Genomic feature analysis:
+    genomic feature plot.R
+
+
 Colocalization analysis:
 
     Colocalization Analysis.R
