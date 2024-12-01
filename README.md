@@ -23,7 +23,8 @@ Association analysis:
 
     association analysis.R
     variation explained.R
-
+    meta-analysis.R
+    
 
 Colocalization analysis:
 
