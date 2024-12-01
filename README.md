@@ -19,7 +19,7 @@ Elastic Net selection:
     elastic net model.R
 
     
-Regression:
+Association analysis:
 
     association analysis.R
     variation explained.R
