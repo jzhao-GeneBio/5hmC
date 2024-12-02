@@ -25,13 +25,13 @@ Association analysis:
 Genomic feature analysis:
 
     genomic feature plot.R
-    ChIP-seq histone.R
 
 
 Multi-omics integration:
 
     RNA-seq gene expression.R 
-
+    ChIP-seq histone.R
+    
 
 Colocalization analysis:
 
