@@ -1,7 +1,7 @@
 # 5hmC
 The programs shown here were used to perform the alignment of the fastq files to human genome (hg38), peak calling, and downstream analyses (e.g., association analysis, enrichment analysis) for identifying AD related 5hmCs.
 
-## analysis process
+## Statistical analysis
 5hmC pre-processing:
 
     sequencing_process.sh
