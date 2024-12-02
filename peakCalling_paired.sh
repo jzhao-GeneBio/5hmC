@@ -70,20 +70,6 @@ elif [[ ${one} == *Admera* ]]; then
 	--SPMR \
 	-q 1e-02
 
-	macs2 callpeak -t ${inputBam}.sor.bam.fil.bam -c $ctrlBam \
-	--scale-to small \
-	--nomodel  \
-	--broad \
-	--extsize ${fragSize}\
-	--shift 0 \
- 	-f BAMPE -g 2913022398 \
-	-n ${ID}_p0.05 \
-	--outdir ${dirres}/${ID}_Admera/macs2_broad_ctrl_pe_fil_dn_lam \
-	--keep-dup all \
-	-B \
-	--SPMR \
-	-p 5e-02
-
 elif [[ ${one} == *Novogene* ]]; then
 	inputBam=${dirres}/${ID}_Novogene/${ID}_b2_rmMultiQual.bam
         samtools sort -@ 4 -T ./temp $inputBam --output-fmt BAM -o ${inputBam}.sor.bam
@@ -129,19 +115,5 @@ elif [[ ${one} == *Novogene* ]]; then
 	-B \
 	--SPMR \
 	-q 1e-02
-
-	macs2 callpeak -t ${inputBam}.sor.bam.fil.bam -c $ctrlBam \
-	--scale-to small \
-	--nomodel  \
-	--broad \
-	--extsize ${fragSize}\
-	--shift 0 \
- 	-f BAMPE -g 2913022398 \
-	-n ${ID}_p0.05 \
-	--outdir ${dirres}/${ID}_Novogene/macs2_broad_ctrl_pe_fil_dn_lam \
-	--keep-dup all \
-	-B \
-	--SPMR \
-	-p 5e-02
 
 fi
