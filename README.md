@@ -31,6 +31,7 @@ Multi-omics integration:
 
     RNA-seq gene expression.R 
     ChIP-seq histone.R
+    TMT proteomics.R
     
 
 Colocalization analysis:
