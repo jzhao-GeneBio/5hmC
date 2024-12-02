@@ -9,6 +9,7 @@ The programs shown here were used to perform the alignment of the fastq files to
     peakCalling_single.sh
     generation of consensus 5hmC region.R
     batch removal.R
+    PCA.R
 
     
 Association analysis:
