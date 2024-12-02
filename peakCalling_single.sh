@@ -63,21 +63,6 @@ if [[ ${one} == *Yerkes* ]]; then
 	--keep-dup all \
 	--SPMR \
 	-q 1e-02
-	
-	
-	macs2 callpeak -t ${inputBam}.sor.bam.fil.bam -c $ctrlBam \
-	--scale-to small \
-	--nomodel \
-	--broad \
-	--extsize ${fragSize}\
-	--shift 0 \
- 	-f BAM -g 2913022398 \
-	-n ${ID}_p0.05 \
-	--outdir ${dirres}/${ID}_Yerkes/macs2_broad_ctrl_fil_dn_lam \
-	-B \
-	--keep-dup all \
-	--SPMR \
-	-p 5e-02
 
 elif [[ ${one} == *Admera* ]]; then
 	inputBam=${dirres}/${ID}_Admera/${ID}_b2_rmMultiQual.bam
@@ -118,26 +103,12 @@ elif [[ ${one} == *Admera* ]]; then
 	--extsize ${fragSize}\
 	--shift 0 \
  	-f BAM -g 2913022398 \
-	-n ${ID}_q0.05 \
+	-n ${ID}_q0.01 \
 	--outdir ${dirres}/${ID}_Admera/macs2_broad_ctrl_fil_dn_lam \
 	--keep-dup all \
 	-B \
 	--SPMR \
-	-q 5e-02
-
-	macs2 callpeak -t ${inputBam}.sor.bam.fil.bam -c $ctrlBam \
-	--scale-to small \
-	--nomodel  \
-	--broad \
-	--extsize ${fragSize}\
-	--shift 0 \
- 	-f BAM -g 2913022398 \
-	-n ${ID}_p0.01 \
-	--outdir ${dirres}/${ID}_Admera/macs2_broad_ctrl_fil_dn_lam \
-	--keep-dup all \
-	-B \
-	--SPMR \
-	-p 1e-02
+	-q 1e-02
 
 elif [[ ${one} == *Novogene* ]]; then
 	inputBam=${dirres}/${ID}_Novogene/${ID}_b2_rmMultiQual.bam
@@ -178,25 +149,11 @@ elif [[ ${one} == *Novogene* ]]; then
 	--extsize ${fragSize}\
 	--shift 0 \
  	-f BAM -g 2913022398 \
-	-n ${ID}_q0.05 \
+	-n ${ID}_q0.01 \
 	--outdir ${dirres}/${ID}_Novogene/macs2_broad_ctrl_fil_dn_lam \
 	--keep-dup all \
 	-B \
 	--SPMR \
-	-q 5e-02
-
-	macs2 callpeak -t ${inputBam}.sor.bam.fil.bam -c $ctrlBam \
-	--scale-to small \
-	--nomodel  \
-	--broad \
-	--extsize ${fragSize}\
-	--shift 0 \
- 	-f BAM -g 2913022398 \
-	-n ${ID}_p0.01 \
-	--outdir ${dirres}/${ID}_Novogene/macs2_broad_ctrl_fil_dn_lam \
-	--keep-dup all \
-	-B \
-	--SPMR \
-	-p 1e-02
+	-q 1e-02
 
 fi
