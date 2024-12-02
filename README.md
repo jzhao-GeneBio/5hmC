@@ -10,14 +10,10 @@ The programs shown here were used to perform the alignment of the fastq files to
     generation of consensus 5hmC region.R
     batch removal.R
 
-
-Elastic Net selection:
-
-    elastic net model.R
-
     
 Association analysis:
 
+    elastic net model.R
     association analysis.R
     variation explained.R
     meta-analysis.R
