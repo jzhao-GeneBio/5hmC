@@ -7,7 +7,7 @@ The programs shown here were used to perform the alignment of the fastq files to
     sequencing_process.sh
     peakCalling_paired.sh
     peakCalling_single.sh
-    derive consensus peaks.R
+    generation of consensus 5hmC region.R
 
 
 Elastic Net selection:
