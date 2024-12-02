@@ -16,6 +16,28 @@ fit <- glmFit(y, design)
 res <- residuals(fit, type="deviance")
 controls <- rownames(rosmap_5hmc)
 seqRUVr <- RUVr(rosmap_5hmc, controls, k=10, res)
-HF=pData(seqRUVr)
-dim(HF)
-saveRDS(HF, "AD_unwanted variation.RDS")
+UV=pData(seqRUVr)
+dim(UV)
+saveRDS(UV, "AD_unwanted variation.RDS")
+
+
+
+############################ regress out unwanted variation ############################
+a=read.delim('~/5hmcData/clinical data.txt')
+a=data.frame(a)
+### read 5hmC data 
+hmC=readRDS('5hmC_AD.RDS')
+outcome=merge(a[,c('projid','study','ad_reagan','age_death','msex','pmi','educ')],hmC,by.x="projid",by.y="projid")
+### read unwanted variation 
+UV=readRDS("AD_unwanted variation.RDS")
+outcome=merge(outcome,UV,by.x="projid",by.y="projid")
+n_peak=ncol(outcome)-7 # the first 7 columns in 'outcome' data are covariates
+outcome[,'age_death']=as.numeric(outcome[,'age_death'])
+outcome[,'educ']=as.numeric(outcome[,'educ'])
+outcome[,'pmi']=as.numeric(outcome[,'pmi'])
+for (i in 8:(7+n_peak)){
+  outcome[,'hmc']=as.numeric(outcome[,i])
+  fit=lm(hmc~UV1+UV2+UV3+UV4+UV5+UV6+UV7+UV8+UV9,outcome)
+  outcome[,i]=residuals(fit)
+}
+write.table(outcome,'residual_AD.csv',sep=',',row.names = F, col.names=T)
