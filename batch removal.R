@@ -1,3 +1,4 @@
+############################ derive unwanted variation ############################
 library(RUVSeq)
 library(readxl)
 basic <- read_excel("~/ROSMAP/dataset_1009_basic_01-30-2023.xlsx")
