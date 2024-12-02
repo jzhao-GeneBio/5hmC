@@ -51,7 +51,6 @@ fdr=p.adjust(p,method="fdr")
 print('significant after multiple testing')
 sum(fdr<0.05)
 match=cbind(pair[,c('DhMR','expression')],corr,p)
-match=match[order(match[,1],match[,2]),]
 match=data.frame(match)
 dim(match)
 write.csv(match,'corr_AD.csv',row.names=F)
