@@ -27,6 +27,11 @@ Genomic feature analysis:
     genomic feature plot.R
 
 
+Multi-omics integration:
+
+    RNA-seq gene expression.R 
+
+
 Colocalization analysis:
 
     Colocalization Analysis.R
